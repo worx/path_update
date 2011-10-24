@@ -1,0 +1,7 @@
+name = Path Update
+description = Updates the pathauto alias for pages added via the add sub page module.
+package = Worx Components
+core = 6.x
+
+;Dependencies
+dependencies[] = pathauto

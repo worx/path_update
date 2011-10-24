@@ -1,0 +1,14 @@
+<?php
+
+/**
+ * Implementation of hook_nodeapi().
+ */
+function path_update_nodeapi(&$node, $op, $a3 = NULL, $a4 = NULL) {
+  switch ($op) {
+    case 'insert':
+      module_load_include('inc', 'pathauto', 'pathauto_node');
+      module_load_include('inc', 'pathauto');
+      node_pathauto_bulkupdate();
+      break;
+  }
+}
